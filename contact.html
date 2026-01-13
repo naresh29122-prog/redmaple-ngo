@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us | Red Maple Foundation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">RedMaple<span>Foundation</span></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Projects</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#donate" class="donate-btn">Donate</a></li>
+        </ul>
+    </nav>
+
+    <section id="donate" class="container" style="background: #fff5f5; border-radius: 20px; margin-top: 40px; padding: 40px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="color: var(--red);">Every Contribution Counts</h1>
+            <p>Your support provides food, medicine, and education to those in need in Noida.</p>
+        </div>
+
+        <div class="donation-box" style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 25px;">
+                <button class="freq-btn active" style="padding: 10px 20px; border-radius: 30px; border: 1px solid var(--red); background: var(--red); color: white; cursor: pointer;">One-Time</button>
+                <button class="freq-btn" style="padding: 10px 20px; border-radius: 30px; border: 1px solid #ddd; background: white; cursor: pointer;">Monthly</button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+                <div class="amt-card" style="border: 2px solid #eee; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer; transition: 0.3s;">
+                    <span style="font-size: 1.2rem; font-weight: 700;">₹100</span>
+                </div>
+                <div class="amt-card" style="border: 2px solid var(--red); padding: 20px; text-align: center; border-radius: 10px; cursor: pointer;">
+                    <span style="font-size: 1.2rem; font-weight: 700; color: var(--red);">₹500</span>
+                </div>
+                <div class="amt-card" style="border: 2px solid #eee; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer;">
+                    <span style="font-size: 1.2rem; font-weight: 700;">₹1000</span>
+                </div>
+            </div>
+
+            <input type="number" placeholder="Enter Custom Amount (₹)" style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;">
+            
+            <button style="width: 100%; background: #28a745; color: white; border: none; padding: 18px; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer;">Proceed to Donate</button>
+            
+            <p style="font-size: 0.8rem; color: #777; margin-top: 15px; text-align: center;">
+                * Secure payment encrypted. Receipts will be sent to your email.
+            </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 style="text-align: center;">Contact for Offline Donations</h2>
+        <div class="contact-container" style="margin-top: 30px;">
+            <div>
+                <h3>Noida Office</h3>
+                <p>Fifth Floor, Let's Connect Building, Sector 136, Noida</p>
+                <p>Email: sandhya@redmapleai.store</p>
+            </div>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="How can we help?"></textarea>
+                <button type="submit" style="background: var(--dark);">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>&copy; 2026 Red Maple Foundation</footer>
+</body>
+</html>
