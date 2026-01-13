@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Red Maple Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .donation-card { border: 2px solid #eee; padding: 20px; border-radius: 10px; cursor: pointer; text-align: center; transition: 0.3s; }
+        .donation-card.active { border-color: #b22222; background: #fff5f5; }
+        #details-form { display: none; margin-top: 30px; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 5px; }
+        input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">RedMaple<span>Foundation</span></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Projects</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="donate-btn">Donate</a></li>
+        </ul>
+    </nav>
+
+    <section style="max-width: 800px; margin: auto; text-align: center; padding: 60px 20px;">
+        <h1 style="color: #b22222;">Support Our Mission</h1>
+        <p>Choose an amount to help children and elderly in Noida.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0;">
+            <div class="donation-card" onclick="selectAmount(100, this)"><h3>₹100</h3></div>
+            <div class="donation-card" onclick="selectAmount(500, this)"><h3>₹500</h3></div>
+            <div class="donation-card" onclick="selectAmount(1000, this)"><h3>₹1000</h3></div>
+        </div>
+
+        <div id="details-form">
+            <h2 style="margin-bottom: 20px;">Donor Information</h2>
+            <form action="https://formspree.io/f/mqaejgzg" method="POST">
+                
+                <input type="hidden" name="Donation Amount" id="selected-amt">
+                
+                <div class="form-group">
+                    <label>Donation Type</label>
+                    <select name="Frequency">
+                        <option value="One-Time">One-Time</option>
+                        <option value="Monthly">Monthly Support</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="Full Name" required placeholder="As per PAN card">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" name="Email" required placeholder="To receive receipt">
+                </div>
+
+                <div class="form-group">
+                    <label>PAN Number (Required for 80G Tax Benefit)</label>
+                    <input type="text" name="PAN Number" placeholder="ABCDE1234F">
+                </div>
+
+                <div class="form-group">
+                    <label>Full Address</label>
+                    <textarea name="Address" rows="3" placeholder="Residential address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you require 80G Receipt?</label>
+                    <div style="display: flex; gap: 20px; margin-top: 10px;">
+                        <label style="font-weight: 400;"><input type="radio" name="Need 80G" value="Yes" checked> Yes</label>
+                        <label style="font-weight: 400;"><input type="radio" name="Need 80G" value="No"> No</label>
+                    </div>
+                </div>
+
+                <button type="submit" style="width: 100%; background: #28a745; color: white; border: none; padding: 15px; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 20px;">
+                    Confirm & Proceed to Payment
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function selectAmount(amt, element) {
+            // Highlight selected card
+            document.querySelectorAll('.donation-card').forEach(card => card.classList.remove('active'));
+            element.classList.add('active');
+            
+            // Set hidden amount and show form
+            document.getElementById('selected-amt').value = amt;
+            document.getElementById('details-form').style.display = 'block';
+            
+            // Scroll to form smoothly
+            document.getElementById('details-form').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
