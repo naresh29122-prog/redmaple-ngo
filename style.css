@@ -1,0 +1,32 @@
+/* Update these in your style.css */
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    background: white;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Add a Professional Footer Style */
+footer {
+    background: #1a1a1a;
+    color: #999;
+    padding: 50px 8% 20px;
+    margin-top: 50px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
