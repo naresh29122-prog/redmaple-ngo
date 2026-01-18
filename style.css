@@ -1,45 +1,27 @@
-/* SAP Global Theme - Responsive */
-:root {
-    --sap-blue: #008fd3;
-    --sap-dark: #00447c;
-    --sap-gold: #f0ab00;
-    --text-color: #32363a;
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
 }
 
-* { box-sizing: border-box; }
-body { font-family: '72', Arial, sans-serif; margin: 0; color: var(--text-color); line-height: 1.6; }
-
-/* Navigation - Mobile Responsive */
-.navbar {
-    display: flex; flex-direction: column; align-items: center;
-    padding: 15px; background: white; border-bottom: 2px solid #eee;
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1454165833767-027ffea9e61d?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
 }
 
-.nav-links { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; padding: 0; }
-.nav-links li { margin: 5px 10px; }
-.nav-links a { text-decoration: none; color: var(--sap-dark); font-weight: bold; font-size: 14px; }
-
-/* Responsive Grid for Mobile */
-.container { padding: 20px; width: 100%; max-width: 1200px; margin: auto; }
-
-.grid { 
-    display: grid; 
-    grid-template-columns: 1fr; /* Single column for mobile */
-    gap: 20px; 
+.icon-box {
+    font-size: 3rem;
 }
 
-/* Tablet & Desktop Layout */
-@media (min-width: 768px) {
-    .navbar { flex-direction: row; justify-content: space-between; padding: 15px 8%; }
-    .grid { grid-template-columns: repeat(2, 1fr); } /* 2 columns for tablets */
+.card:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
-@media (min-width: 1024px) {
-    .grid { grid-template-columns: repeat(3, 1fr); } /* 3 columns for desktop */
+.btn-primary {
+    background-color: #0062cc;
+    border: none;
 }
-
-/* Responsive Images */
-img { max-width: 100%; height: auto; border-radius: 8px; }
-
-/* Cards for Content */
-.card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 4px solid var(--sap-blue); }
