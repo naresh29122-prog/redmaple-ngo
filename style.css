@@ -1,0 +1,43 @@
+:root {
+  --sap-blue: #008fd3;
+  --sap-dark: #00447c;
+  --sap-light: #f5f6f7;
+  --text-main: #32363a;
+}
+
+body {
+  font-family: '72', '72full', Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: white;
+  border-bottom: 2px solid var(--sap-light);
+  position: sticky; top: 0; z-index: 1000;
+}
+
+.hero {
+  background: linear-gradient(to right, rgba(0,68,124,0.9), rgba(0,143,211,0.7)), url('hero.jpg');
+  height: 80vh;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--sap-blue);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
